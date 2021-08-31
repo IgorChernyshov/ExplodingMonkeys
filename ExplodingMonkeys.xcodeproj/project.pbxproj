@@ -15,6 +15,8 @@
 		D6F53BF126DE105600CC4270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F53BF026DE105600CC4270 /* Assets.xcassets */; };
 		D6F53BFD26DE157200CC4270 /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6F53BFB26DE157200CC4270 /* hitBuilding.sks */; };
 		D6F53BFE26DE157200CC4270 /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6F53BFC26DE157200CC4270 /* hitPlayer.sks */; };
+		D6F53C0126DE255400CC4270 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F53C0026DE255400CC4270 /* BuildingNode.swift */; };
+		D6F53C0426DE25C300CC4270 /* CollisionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F53C0326DE25C300CC4270 /* CollisionTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D6F53BF226DE105600CC4270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6F53BFB26DE157200CC4270 /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
 		D6F53BFC26DE157200CC4270 /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
+		D6F53C0026DE255400CC4270 /* BuildingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
+		D6F53C0326DE25C300CC4270 /* CollisionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				D6F53BE526DE105400CC4270 /* GameScene.sks */,
 				D6F53BFA26DE155700CC4270 /* Actions */,
 				D6F53BE926DE105400CC4270 /* GameScene.swift */,
+				D6F53C0026DE255400CC4270 /* BuildingNode.swift */,
+				D6F53C0326DE25C300CC4270 /* CollisionTypes.swift */,
 				D6F53BEB26DE105400CC4270 /* GameViewController.swift */,
 				D6F53BED26DE105400CC4270 /* Main.storyboard */,
 				D6F53BF026DE105600CC4270 /* Assets.xcassets */,
@@ -154,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6F53BEA26DE105400CC4270 /* GameScene.swift in Sources */,
+				D6F53C0126DE255400CC4270 /* BuildingNode.swift in Sources */,
 				D6F53BEC26DE105400CC4270 /* GameViewController.swift in Sources */,
+				D6F53C0426DE25C300CC4270 /* CollisionTypes.swift in Sources */,
 				D6F53BE426DE105400CC4270 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
