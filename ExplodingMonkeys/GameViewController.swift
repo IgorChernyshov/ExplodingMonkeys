@@ -20,13 +20,15 @@ final class GameViewController: UIViewController {
 	@IBOutlet var playerLabel: UILabel!
 
 	// MARK: - Properties
-	private var currentGame: GameScene!
+	var currentGame: GameScene!
 
 	// MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		angleSlider.value = 45
 		angleChanged(angleSlider!)
+		velocitySlider.value = 125
 		velocityChanged(velocitySlider!)
 
         if let view = self.view as! SKView? {
@@ -50,7 +52,7 @@ final class GameViewController: UIViewController {
         }
     }
 
-	// MARK: - Controller Settings
+	// MARK: - View Controller Settings
     override var shouldAutorotate: Bool {
         return true
     }
