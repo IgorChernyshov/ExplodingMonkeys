@@ -18,9 +18,29 @@ final class GameViewController: UIViewController {
 	@IBOutlet var velocityLabel: UILabel!
 	@IBOutlet var launchButton: UIButton!
 	@IBOutlet var playerLabel: UILabel!
-
+	@IBOutlet var player1ScoreLabel: UILabel!
+	@IBOutlet var player2ScoreLabel: UILabel!
+	@IBOutlet var gameOverLabel: UILabel!
+	
 	// MARK: - Properties
 	var currentGame: GameScene!
+
+	var isGameOver: Bool = false
+	private var gameOverScore: Int = 3
+
+	var player1Score: Int = 0 {
+		didSet {
+			player1ScoreLabel.text = "Score: \(player1Score)"
+			checkGameOver()
+		}
+	}
+
+	var player2Score: Int = 0 {
+		didSet {
+			player2ScoreLabel.text = "Score: \(player2Score)"
+			checkGameOver()
+		}
+	}
 
 	// MARK: - Lifecycle
     override func viewDidLoad() {
@@ -90,7 +110,7 @@ final class GameViewController: UIViewController {
 		currentGame.launch(angle: Int(angleSlider.value), velocity: Int(velocitySlider.value))
 	}
 
-	// MARK: - Other Game Logic
+	// MARK: - Game Logic
 	func activatePlayer(number: Int) {
 		if number == 1 {
 			playerLabel.text = "<<< PLAYER ONE"
@@ -105,5 +125,19 @@ final class GameViewController: UIViewController {
 		velocityLabel.isHidden = false
 
 		launchButton.isHidden = false
+	}
+
+	func checkGameOver() {
+		if player1Score == gameOverScore {
+			configureGameOver(winningPlayer: 1)
+		} else if player2Score == gameOverScore {
+			configureGameOver(winningPlayer: 2)
+		}
+	}
+
+	private func configureGameOver(winningPlayer: Int) {
+		gameOverLabel.text = "Game over. Player \(winningPlayer) Wins!"
+		gameOverLabel.isHidden = false
+		isGameOver = true
 	}
 }

@@ -43,6 +43,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypd-86-rVU">
+                                <rect key="frame" x="20" y="61" width="63.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velocity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-9W-5cx">
                                 <rect key="frame" x="785" y="24" width="120" height="21"/>
                                 <constraints>
@@ -76,19 +82,40 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5s-GO-RgK">
+                                <rect key="frame" x="716.5" y="61" width="63.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ye-sF-CiR">
+                                <rect key="frame" x="481.5" y="390.5" width="117" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PFu-cj-W6o" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="1zB-d8-DYs"/>
+                            <constraint firstItem="N5s-GO-RgK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RKJ-vD-Fxv" secondAttribute="trailing" constant="16" id="5BK-Ev-FCa"/>
+                            <constraint firstItem="RKJ-vD-Fxv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ypd-86-rVU" secondAttribute="trailing" constant="16" id="7Qc-oH-Sqp"/>
+                            <constraint firstItem="Ypd-86-rVU" firstAttribute="centerY" secondItem="RKJ-vD-Fxv" secondAttribute="centerY" id="Ghc-hw-njh"/>
+                            <constraint firstItem="0Ye-sF-CiR" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="LeH-0q-FlV"/>
                             <constraint firstItem="RKJ-vD-Fxv" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="54" id="M4V-g1-wsI"/>
                             <constraint firstItem="voG-AU-zsi" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="910" id="Sho-yv-umU"/>
                             <constraint firstItem="voG-AU-zsi" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="13" id="V6O-bB-Tw1"/>
+                            <constraint firstItem="0Ye-sF-CiR" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="aY9-pP-ent"/>
+                            <constraint firstItem="N5s-GO-RgK" firstAttribute="centerY" secondItem="RKJ-vD-Fxv" secondAttribute="centerY" id="b40-B1-PKi"/>
                             <constraint firstItem="WdS-Ck-akT" firstAttribute="leading" secondItem="PFu-cj-W6o" secondAttribute="trailing" constant="160" id="cm0-f9-Efc"/>
                             <constraint firstItem="a4G-9W-5cx" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="785" id="ehb-VD-Zjw"/>
                             <constraint firstItem="RKJ-vD-Fxv" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="310" id="feR-qJ-POq"/>
                             <constraint firstItem="Aee-ne-jl3" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="24" id="lMP-Uy-RQp"/>
+                            <constraint firstItem="Ypd-86-rVU" firstAttribute="leading" secondItem="PFu-cj-W6o" secondAttribute="leading" id="mTp-P3-Vnb"/>
                             <constraint firstItem="WdS-Ck-akT" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="20" id="q0x-di-Iki"/>
+                            <constraint firstItem="N5s-GO-RgK" firstAttribute="trailing" secondItem="WdS-Ck-akT" secondAttribute="trailing" id="q2j-JG-Eew"/>
                             <constraint firstItem="Aee-ne-jl3" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="325" id="sqo-NM-9gY"/>
                             <constraint firstItem="PFu-cj-W6o" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="20" id="xrF-ti-1X1"/>
                             <constraint firstItem="a4G-9W-5cx" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="24" id="zv8-XR-nMT"/>
@@ -97,7 +124,10 @@
                     <connections>
                         <outlet property="angleLabel" destination="Aee-ne-jl3" id="D1c-Gv-Icq"/>
                         <outlet property="angleSlider" destination="PFu-cj-W6o" id="hjS-FN-MwQ"/>
+                        <outlet property="gameOverLabel" destination="0Ye-sF-CiR" id="yAi-ho-Eel"/>
                         <outlet property="launchButton" destination="voG-AU-zsi" id="1Cc-Bk-NDD"/>
+                        <outlet property="player1ScoreLabel" destination="Ypd-86-rVU" id="qJg-RP-plm"/>
+                        <outlet property="player2ScoreLabel" destination="N5s-GO-RgK" id="Ke0-eF-SYN"/>
                         <outlet property="playerLabel" destination="RKJ-vD-Fxv" id="UJ8-vN-P07"/>
                         <outlet property="velocityLabel" destination="a4G-9W-5cx" id="tuD-lY-Pxk"/>
                         <outlet property="velocitySlider" destination="WdS-Ck-akT" id="FXO-J2-exl"/>
@@ -105,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="102"/>
+            <point key="canvasLocation" x="-214.44444444444443" y="101.48148148148148"/>
         </scene>
     </scenes>
     <resources>

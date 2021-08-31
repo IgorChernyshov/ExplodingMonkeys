@@ -128,6 +128,10 @@ final class GameScene: SKScene {
 		player.removeFromParent()
 		banana.removeFromParent()
 
+		if viewController.isGameOver {
+			return
+		}
+
 		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 			let newGame = GameScene(size: self.size)
 			newGame.viewController = self.viewController
@@ -207,10 +211,12 @@ extension GameScene: SKPhysicsContactDelegate {
 		}
 
 		if firstNode.name == "banana" && secondNode.name == "player1" {
+			viewController.player2Score += 1
 			destroy(player: player1)
 		}
 
 		if firstNode.name == "banana" && secondNode.name == "player2" {
+			viewController.player1Score += 1
 			destroy(player: player2)
 		}
 	}
