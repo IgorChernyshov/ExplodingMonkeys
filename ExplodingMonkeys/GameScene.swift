@@ -12,6 +12,7 @@ final class GameScene: SKScene {
 
 	// MARK: - Properties
 	private var buildings = [BuildingNode]()
+	private var precipitation: SKEmitterNode!
 
 	private var player1: SKSpriteNode!
 	private var player2: SKSpriteNode!
@@ -25,6 +26,7 @@ final class GameScene: SKScene {
     override func didMove(to view: SKView) {
 		backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
 		physicsWorld.contactDelegate = self
+		createPrecipitation()
 		createBuildings()
 		createPlayers()
     }
@@ -71,6 +73,24 @@ final class GameScene: SKScene {
 		let player2Building = buildings[buildings.count - 2]
 		player2.position = CGPoint(x: player2Building.position.x, y: player2Building.position.y + ((player2Building.size.height + player2.size.height) / 2))
 		addChild(player2)
+	}
+
+	// MARK: - Wind
+	private func createPrecipitation() {
+//		let windX = CGFloat.random(in: -5.0 ... 5.0)
+		let windX: CGFloat = 5.0
+		let windY = CGFloat.random(in: -10.8 ... -8.8)
+		let windVector = CGVector(dx: windX, dy: windY)
+		physicsWorld.gravity = windVector
+
+		precipitation = SKEmitterNode(fileNamed: "precipitation")!
+		precipitation.position = CGPoint(x: 512, y: 812)
+		precipitation.advanceSimulationTime(5)
+		precipitation.xAcceleration = windX * 50
+		precipitation.yAcceleration = windY * 10
+		precipitation.particleColor = Bool.random() ? #colorLiteral(red: 0.4513868093, green: 0.9930960536, blue: 1, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+		addChild(precipitation)
+		precipitation.zPosition = 0
 	}
 
 	// MARK: - Game Logic

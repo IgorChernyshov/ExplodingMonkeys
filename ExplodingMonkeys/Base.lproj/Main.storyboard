@@ -109,14 +109,14 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="fnp-Of-2Kj" secondAttribute="trailing" constant="290" id="7tE-eY-dBv"/>
                             <constraint firstItem="AZv-Wd-VUY" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="G3R-sr-bXa"/>
                             <constraint firstItem="0Ye-sF-CiR" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="LeH-0q-FlV"/>
+                            <constraint firstItem="fnp-Of-2Kj" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="OPk-Hn-8ex"/>
                             <constraint firstItem="AZv-Wd-VUY" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="RVv-cS-DEf"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="AZv-Wd-VUY" secondAttribute="trailing" constant="16" id="ST1-cD-aSx"/>
-                            <constraint firstItem="fnp-Of-2Kj" firstAttribute="leading" secondItem="PFu-cj-W6o" secondAttribute="leading" id="V9I-zR-d96"/>
                             <constraint firstItem="0Ye-sF-CiR" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="aY9-pP-ent"/>
-                            <constraint firstItem="fnp-Of-2Kj" firstAttribute="top" secondItem="AZv-Wd-VUY" secondAttribute="bottom" constant="8" symbolic="YES" id="eGr-AE-B7B"/>
-                            <constraint firstItem="fnp-Of-2Kj" firstAttribute="trailing" secondItem="WdS-Ck-akT" secondAttribute="trailing" id="ytJ-rV-cjP"/>
+                            <constraint firstItem="fnp-Of-2Kj" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="68" id="be9-jS-Nof"/>
                         </constraints>
                     </view>
                     <connections>
